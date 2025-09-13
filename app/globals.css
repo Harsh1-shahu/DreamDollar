@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    @apply bg-gray-100 text-gray-900;
+    /* Light mode */
+  }
+
+  html.dark {
+    @apply bg-gray-900 text-gray-100;
+    /* Dark mode */
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-slide {
+  display: flex;
+  min-width: max-content;
+  animation: marquee 20s linear infinite;
+}
